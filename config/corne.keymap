@@ -13,7 +13,7 @@
         compatible = "zmk,combos";
 
         copy {
-            bindings = <&kp LS(C)>;
+            bindings = <&kp LC(C)>;
             key-positions = <27 26>;
         };
 

@@ -19,12 +19,12 @@
 
         pasteformat {
             bindings = <&kp LS(LC(V))>;
-            key-positions = <27 26>;
+            key-positions = <26 28 27>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <26 27 28>;
+            key-positions = <26 28>;
         };
     };
 

@@ -13,13 +13,18 @@
         compatible = "zmk,combos";
 
         copy {
-            bindings = <&kp LC(LS(C))>;
+            bindings = <&kp LS(C)>;
+            key-positions = <27 26>;
+        };
+
+        pasteformat {
+            bindings = <&kp LS(LC(V))>;
             key-positions = <27 26>;
         };
 
         paste {
-            bindings = <&kp LS(LC(V))>;
-            key-positions = <27 28>;
+            bindings = <&kp LC(V)>;
+            key-positions = <26 27 28>;
         };
     };
 

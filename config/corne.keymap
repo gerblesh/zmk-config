@@ -1,3 +1,4 @@
+// vi:ft=c
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -7,6 +8,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+&lt {
+    tapping-term-ms = <125>;
+    retro-tap;
+};
 
 / {
     combos {
@@ -54,7 +59,7 @@
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Lower";
+            display-name = "Nav";
             bindings = <
 &kp TAB             &kp N1          &kp N2           &kp N3        &kp N4                &kp N5                  &kp N6              &kp N7            &kp N8      &kp N9     &kp N0      &kp BSPC
 &kp LEFT_CONTROL    &kp LEFT_ARROW  &kp DOWN         &kp UP_ARROW  &kp RIGHT             &kp C_BRIGHTNESS_INC    &kp LEFT            &kp DOWN          &kp UP      &kp RIGHT  &kp DELETE  &trans
@@ -70,7 +75,7 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Sym";
             bindings = <
 &trans     &kp EXCL  &kp AT     &kp LESS_THAN   &kp GREATER_THAN  &kp PRCNT    &kp CARET        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE          &trans            &kp BSPC
 &kp MINUS  &kp PLUS  &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp UNDER    &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND      &kp COLON         &kp TILDE
@@ -80,6 +85,7 @@
         };
 
         fun {
+            display-name = "Fun"
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3         &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans      &kp F12       &kp PAGE_UP   &kp PAGE_DOWN  &trans        &trans          &trans  &trans  &trans  &trans  &trans   &trans

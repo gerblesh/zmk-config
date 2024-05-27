@@ -44,8 +44,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
         };
 
         dt_ctrl_shift: dt_ctrl_shift {

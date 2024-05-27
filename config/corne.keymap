@@ -44,8 +44,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
         };
 
         dt_ctrl_shift: dt_ctrl_shift {
@@ -123,7 +123,7 @@
 &kp ESC    &trans  &trans  &trans   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LALT   &kp A   &kp S   &kp D    &kp F   &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHFT  &trans  &trans  &trans   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                           &kp TAB  &mo 5   &kp SPACE    &to 0   &trans  &trans
+                           &kp TAB  &sl 5   &kp SPACE    &to 0   &trans  &trans
             >;
         };
 

@@ -37,7 +37,7 @@
 
         superL {
             bindings = <&kp LGUI>;
-            key-positions = <15 14>;
+            key-positions = <15 16>;
         };
 
         superR {

@@ -108,6 +108,17 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_peripheral_status, struct peripheral_status_s
                             output_status_update_cb, get_state)
 ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
 
+#define FRAME_AMOUNT 3
+lv_img_dsc_t **animation_frames = {&froggo_mode, &baloon, &mountain}
+int current_frame = 0;
+
+void animation_timer_cb(lv_timer_t *timer) {
+    lv_obj_t *art = (lv_obj_t *)lv_timer_get_user_data(timer);
+    current_frame = (current_frame + 1) % FRAME_AMOUNT;
+    lv_img_set_src(art, animation_frames[current_frame]);
+    lv_timer_reset(timer);
+}
+
 int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     widget->obj = lv_obj_create(parent);
     lv_obj_set_size(widget->obj, 160, 68);
@@ -116,9 +127,9 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_canvas_set_buffer(top, widget->cbuf, CANVAS_SIZE, CANVAS_SIZE, LV_IMG_CF_TRUE_COLOR);
 
     lv_obj_t *art = lv_img_create(widget->obj);
-    bool random = sys_rand32_get() & 1;
-    lv_img_set_src(art, &froggo_mode);
+    lv_img_set_src(art, animation_frames[0]);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
+    lv_timer_create(animation_timer_cb, 200, art)
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();

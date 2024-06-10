@@ -109,7 +109,7 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_peripheral_status, struct peripheral_status_s
 ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
 
 #define FRAME_AMOUNT 3
-const lv_img_dsc_t **animation_frames = {&froggo_mode, &balloon, &mountain}
+const lv_img_dsc_t *animation_frames[FRAME_AMOUNT] = {&froggo_mode, &balloon, &mountain};
 int current_frame = 0;
 
 void animation_timer_cb(lv_timer_t *timer) {

@@ -113,7 +113,7 @@ const lv_img_dsc_t *animation_frames[FRAME_AMOUNT] = {&froggo_mode, &balloon, &m
 int current_frame = 0;
 
 void animation_timer_cb(lv_timer_t *timer) {
-    lv_obj_t *art = (lv_obj_t *)lv_timer_get_user_data(timer);
+    lv_obj_t *art = timer->user_data;
     current_frame = (current_frame + 1) % FRAME_AMOUNT;
     lv_img_set_src(art, animation_frames[current_frame]);
     lv_timer_reset(timer);

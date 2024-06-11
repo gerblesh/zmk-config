@@ -576,12 +576,6 @@ const lv_img_dsc_t froggo_mode_0006 = {
 #endif
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FROGGO_MODE_0007 uint8_t froggo_mode_0007_map[] = {
-
-#ifndef LV_ATTRIBUTE_IMG_FROGGO_MODE_0007
-#define LV_ATTRIBUTE_IMG_FROGGO_MODE_0007
-#endif
-
-const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_FROGGO_MODE_0007 uint8_t froggo_mode_0007_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/

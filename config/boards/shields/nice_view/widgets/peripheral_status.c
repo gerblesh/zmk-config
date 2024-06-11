@@ -121,7 +121,7 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_peripheral_status, struct peripheral_status_s
                             output_status_update_cb, get_state)
 ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
 
-#define FRAME_AMOUNT 3
+#define FRAME_AMOUNT 16
 const lv_img_dsc_t *animation_frames[FRAME_AMOUNT] = {&froggo_mode_0001,&froggo_mode_0002,&froggo_mode_0003,&froggo_mode_0004,&froggo_mode_0005,&froggo_mode_0006,&froggo_mode_0007,&froggo_mode_0008,&froggo_mode_0009,&froggo_mode_0010,&froggo_mode_0011,&froggo_mode_0012,&froggo_mode_0013,&froggo_mode_0014,&froggo_mode_0015,&froggo_mode_0016};
 int current_frame = 0;
 

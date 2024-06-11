@@ -23,9 +23,22 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
-LV_IMG_DECLARE(balloon);
-LV_IMG_DECLARE(mountain);
-LV_IMG_DECLARE(froggo_mode);
+LV_IMG_DECLARE(froggo_mode_0001);
+LV_IMG_DECLARE(froggo_mode_0002);
+LV_IMG_DECLARE(froggo_mode_0003);
+LV_IMG_DECLARE(froggo_mode_0004);
+LV_IMG_DECLARE(froggo_mode_0005);
+LV_IMG_DECLARE(froggo_mode_0006);
+LV_IMG_DECLARE(froggo_mode_0007);
+LV_IMG_DECLARE(froggo_mode_0008);
+LV_IMG_DECLARE(froggo_mode_0009);
+LV_IMG_DECLARE(froggo_mode_0010);
+LV_IMG_DECLARE(froggo_mode_0011);
+LV_IMG_DECLARE(froggo_mode_0012);
+LV_IMG_DECLARE(froggo_mode_0013);
+LV_IMG_DECLARE(froggo_mode_0014);
+LV_IMG_DECLARE(froggo_mode_0015);
+LV_IMG_DECLARE(froggo_mode_0016);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -109,7 +122,7 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_peripheral_status, struct peripheral_status_s
 ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
 
 #define FRAME_AMOUNT 3
-const lv_img_dsc_t *animation_frames[FRAME_AMOUNT] = {&froggo_mode, &balloon, &mountain};
+const lv_img_dsc_t *animation_frames[FRAME_AMOUNT] = {&froggo_mode_0001,&froggo_mode_0002,&froggo_mode_0003,&froggo_mode_0004,&froggo_mode_0005,&froggo_mode_0006,&froggo_mode_0007,&froggo_mode_0008,&froggo_mode_0009,&froggo_mode_0010,&froggo_mode_0011,&froggo_mode_0012,&froggo_mode_0013,&froggo_mode_0014,&froggo_mode_0015,&froggo_mode_0016};
 int current_frame = 0;
 
 void animation_timer_cb(lv_timer_t *timer) {
@@ -129,7 +142,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t *art = lv_img_create(widget->obj);
     lv_img_set_src(art, animation_frames[0]);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
-    lv_timer_create(animation_timer_cb, 1000, art);
+    lv_timer_create(animation_timer_cb, 166, art);
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();

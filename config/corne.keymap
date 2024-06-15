@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
@@ -30,6 +31,12 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 21>;
             layers = <0 1 2 3>;
+        };
+
+        mouse {
+            bindings = <&to 7>;
+            key-positions = <16 19>;
+            layers = <0 2 3 1>;
         };
     };
 
@@ -157,6 +164,8 @@
 &kp LSHFT  &trans  &trans  &trans   &trans  &trans       &trans  &trans    &trans    &trans     &trans  &trans
                            &kp TAB  &sl 5   &kp SPACE    &to 0   &trans    &trans
             >;
+
+            label = "Game";
         };
 
         game+ {
@@ -167,6 +176,8 @@
 &kp N  &kp PAGE_DOWN  &kp PAGE_UP  &trans        &kp NUMBER_7  &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans
             >;
+
+            label = "Game+";
         };
 
         game-full {
@@ -175,6 +186,28 @@
 &kp LALT   &kp A   &kp S   &kp D   &kp F   &trans    &kp H   &kp J   &kp K   &kp L   &kp APOS  &trans
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans    &to 0
                            &trans  &sl 5   &trans    &trans  &trans  &trans
+            >;
+
+            label = "Game-full";
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &to 0   &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
+                        &trans  &trans  &mo 8     &mkp LCLK       &mkp RCLK       &mkp MCLK
+            >;
+
+            label = "mouse";
+        };
+
+        mouse_scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans            &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &msc MOVE_LEFT  &msc SCROLL_DOWN  &msc SCROLL_UP  &msc MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans            &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans    &trans          &trans            &trans
             >;
         };
     };

@@ -221,7 +221,7 @@
         mouse_scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans            &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &msc MOVE_LEFT  &msc SCROLL_DOWN  &msc SCROLL_UP  &msc MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans            &trans          &trans           &trans  &trans
                         &trans  &trans  &trans    &trans          &trans            &trans
             >;

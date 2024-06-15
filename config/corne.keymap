@@ -168,7 +168,7 @@
             label = "Game";
         };
 
-        game+ {
+        game_plus {
             display-name = "Game+";
             bindings = <
 &to 0  &kp Y          &trans       &kp NUMBER_4  &kp NUMBER_5  &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -180,7 +180,7 @@
             label = "Game+";
         };
 
-        game-full {
+        game_full {
             bindings = <
 &kp ESC    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
 &kp LALT   &kp A   &kp S   &kp D   &kp F   &trans    &kp H   &kp J   &kp K   &kp L   &kp APOS  &trans

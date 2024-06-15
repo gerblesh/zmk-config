@@ -49,7 +49,7 @@
             layers = <0 1 2 3>;
         };
 
-        mouse {
+        mouse_combo {
             bindings = <&to 7>;
             key-positions = <16 19>;
             layers = <0 2 3 1>;

@@ -54,6 +54,12 @@
             key-positions = <16 19>;
             layers = <0 2 3 1>;
         };
+
+        esc_mouse {
+            bindings = <&to 0>;
+            key-positions = <19 21>;
+            layers = <7>;
+        };
     };
 
     behaviors {
@@ -209,24 +215,13 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &to 0   &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans  &trans  &mo 8     &mkp LCLK       &mkp RCLK       &mkp MCLK
+&trans  &trans      &trans    &trans     &trans    &trans    &trans            &msc SCROLL_UP  &mmv MOVE_UP    &msc SCROLL_DOWN  &trans             &trans
+&trans  &kp LSHIFT  &kp LALT  &kp LCTRL  &kp LGUI  &trans    &msc SCROLL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCROLL_RIGHT  &trans
+&trans  &trans      &trans    &trans     &trans    &trans    &trans            &trans          &trans          &trans            &trans             &trans
+                              &trans     &trans    &trans    &mkp LCLK         &mkp RCLK       &mkp MCLK
             >;
 
             label = "Mouse";
-        };
-
-        mouse_scroll {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans          &trans          &trans
-            >;
-
-            label = "MouseScroll";
         };
     };
 

@@ -134,7 +134,7 @@
         nerd_emoji: nerd_emoji {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT &kp RS(LCTRL) &kp RS(LC(U)) &kp RS(LC(N1)) &kp RS(LC(F)) &kp RS(LC(N9)) &kp RS(LC(N1)) &kp RS(LC(N3))>;
+            bindings = <&kp RS(LC(U)) &kp N1 &kp F &kp N9 &kp N1 &kp N3 &kp SPACE>;
             label = "NERD_EMOJI";
         };
     };

@@ -215,10 +215,10 @@
         game_plus {
             display-name = "Game+";
             bindings = <
-&to 0         &kp NUMBER_1   &trans       &kp NUMBER_4  &kp NUMBER_5  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&kp NUMBER_2  &trans         &trans       &trans        &kp N6        &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&kp NUMBER_3  &kp PAGE_DOWN  &kp PAGE_UP  &kp NUMBER_8  &kp NUMBER_7  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                                          &kp NUMBER_1  &kp NUMBER_2  &kp F3    &trans  &trans  &trans
+&to 0         &kp NUMBER_1   &kp N2       &kp N3        &kp N4        &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&kp N0        &trans         &trans       &trans        &kp N6        &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_9  &kp PAGE_DOWN  &kp PAGE_UP  &kp NUMBER_8  &kp NUMBER_7  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                                          &kp F1        &kp F2        &kp F3    &trans  &trans  &trans
             >;
 
             label = "Game+";

@@ -89,7 +89,7 @@
     behaviors {
         shift_space: shift_space {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_SPACE";
+            // label = "SHIFT_SPACE";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -107,7 +107,7 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            // label = "HMR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -121,7 +121,7 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            // label = "HML";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -135,14 +135,14 @@
 
         dt_boot_reset: dt_boot_reset {
             compatible = "zmk,behavior-tap-dance";
-            label = "DT_BOOT_RESET";
+            // label = "DT_BOOT_RESET";
             #binding-cells = <0>;
             bindings = <&bootloader>, <&sys_reset>;
         };
 
         dt_tab_alt: dt_tab_alt {
             compatible = "zmk,behavior-tap-dance";
-            label = "DT_TAB_ALT";
+            // label = "DT_TAB_ALT";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp LALT>;
         };

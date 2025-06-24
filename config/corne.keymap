@@ -185,10 +185,10 @@
 
             display-name = "Nav";
             bindings = <
-&trans  &kp N1          &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    kp N7          &kp N8         &kp N9           &kp N0      &trans
-&trans  &kp LC(LSHIFT)  &trans  &trans  &trans  &trans    &kp LEFT  hmr RGUI DOWN  &hmr RCTRL UP  &hmr RALT RIGHT  &kp DELETE  &trans
-&trans  &trans          &trans  &trans  &trans  &trans    &trans    trans          &trans         &trans           &trans      &trans
-                                &trans  &trans  &trans    &trans    trans          &trans
+&trans  &kp N1          &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7          &kp N8         &kp N9           &kp N0      &trans
+&trans  &kp LC(LSHIFT)  &trans  &trans  &trans  &trans    &kp LEFT  &hmr RGUI DOWN  &hmr RCTRL UP  &hmr RALT RIGHT  &kp DELETE  &trans
+&trans  &trans          &trans  &trans  &trans  &trans    &trans    &trans          &trans         &trans           &trans      &trans
+                                &trans  &trans  &trans    &trans    &trans          &trans
             >;
         };
 

@@ -52,7 +52,7 @@
         caps_word {
             bindings = <&caps_word>;
             key-positions= <14 16>;
-            layer = <0 1 2 3>;
+            layers = <0 1 2 3>;
         };
 
         ctrl_enter {

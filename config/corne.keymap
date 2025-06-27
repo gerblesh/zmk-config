@@ -107,7 +107,6 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            // label = "HMR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -121,7 +120,6 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            // label = "HML";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -171,7 +169,7 @@
             bindings = <
 &kp NUMBER_6  &kp Q  &kp W        &kp E         &kp R        &kp T        &kp Y                   &kp U            &kp I         &kp O        &kp P           &nerd_emoji
 &kp MINUS     &kp A  &hml LALT S  &hml LCTRL D  &hml LGUI F  &kp G        &kp H                   &hmr RGUI J      &hmr RCTRL K  &hmr RALT L  &kp APOSTROPHE  &kp UNDERSCORE
-&kp PLUS      &kp Z  &kp X        &kp C         &kp V        &kp B        &kp N                   &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp EQUAL
+&kp PLUS      &kp Z  &kp X        &kp C         &kp V        &kp B        &kp N                   &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp EQUALS
                                   &kp TAB       &mo 1        &kp SPACE    &sk RIGHT_SHIFT         &lt 2 BACKSPACE  &key_repeat
             >;
         };
@@ -185,10 +183,10 @@
 
             display-name = "Nav";
             bindings = <
-&trans  &kp N1          &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7          &kp N8         &kp N9           &kp N0      &trans
-&trans  &kp LC(LSHIFT)  &trans  &trans  &trans  &trans    &kp LEFT  &hmr RGUI DOWN  &hmr RCTRL UP  &hmr RALT RIGHT  &kp DELETE  &trans
-&trans  &trans          &trans  &trans  &trans  &trans    &trans    &trans          &trans         &trans           &trans      &trans
-                                &trans  &trans  &trans    &trans    &trans          &trans
+&trans  &trans         &kp N7  &kp N8  &kp N9  &trans            &kp PLUS   &kp GREATER_THAN      &LESS_THAN             &trans          &trans       &trans
+&trans  &kp N0         &kp N4  &kp N5  &kp N6  &kp EQUALS         &kp LEFT   &hmr RGUI DOWN        &hmr RCTRL UP          &hmr RALT RIGHT  &kp DELETE  &trans
+&trans  &kp LC(SHIFT)  &kp N1  &kp N2  &kp N3  &kp UNDERSCORE    &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans           &trans      &trans
+                        &trans  &trans  &trans                   &trans    &trans          &trans
             >;
         };
 
